@@ -1,0 +1,28 @@
+buildscript {
+    repositories {
+        maven {
+            setUrl("https://plugins.gradle.org/m2/")
+        }
+    }
+    dependencies {
+        classpath("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.10.0")
+    }
+}
+
+apply plugin: io.gitlab.arturbosch.detekt.DetektPlugin
+
+detekt {
+    failFast = true
+    buildUponDefaultConfig = true
+    input = files("$projectDir")
+    config = files("$rootDir/detekt/detekt-config.yml")
+
+    reports {
+        html {
+            enabled = true
+            destination = file("build/reports/detekt.html")
+        }
+    }
+}
+
+tasks.detekt.jvmTarget = "1.8"

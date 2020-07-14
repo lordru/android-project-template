@@ -1,11 +1,17 @@
 <h1 align='center'>Android Project Template</h1>
 
+### Features
+- 100% Kotlin
+- Code formatting - [ktlint](https://github.com/pinterest/ktlint)
+- Code analysis - [detekt](https://github.com/detekt/detekt)
+
 ### Code Style
 To maintain the style and quality of the code, are used the bellow static analysis tools.
 
 | Tool                                                   | Config file  | Check command      | Fix command               |
 |---------------------------------------------------------|--------------|--------------------|---------------------------|
 | [ktlint](https://github.com/pinterest/ktlint)           | -            | `./gradlew ktlint` | `./gradlew ktlintFormat`  |
+| [detekt](https://github.com/detekt/detekt)           | [.detekt-config.yml](/detekt/detekt-config.yml)            | `./gradlew detekt` | -  |
 
 ### Dependencies
 -   [Timber](https://github.com/JakeWharton/timber) - a logger with a small, extensible API which provides utility on top of Android's normal Log class.
