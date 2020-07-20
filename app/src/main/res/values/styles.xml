@@ -8,7 +8,7 @@
 
     <style name="TextAppearance" />
 
-    <style name="TextAppearance.Sample" parent="@style/TextAppearance.MaterialComponents.Button" />
+    <style name="TextAppearance.App" parent="@style/TextAppearance.MaterialComponents.Button" />
 
     <style name="Widget.App" parent="android:Widget" />
 
