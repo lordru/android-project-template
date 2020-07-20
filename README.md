@@ -1,5 +1,11 @@
 <h1 align='center'>Android Project Template</h1>
 
+<p align="center">
+    <a href="https://img.shields.io/badge/Platform-Android%206.0-36da7e?logo=android&style=for-the-badge">
+        <img src="https://img.shields.io/badge/Platform-Android%206.0-36da7e?logo=android&style=for-the-badge" alt="Platform" />
+    </a>
+</p>
+
 ### Features
 - 100% Kotlin
 - Code formatting - [ktlint](https://github.com/pinterest/ktlint)
