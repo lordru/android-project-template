@@ -21,6 +21,7 @@ To maintain the style and quality of the code, are used the bellow static analys
 
 ### Dependencies
 -   [Timber](https://github.com/JakeWharton/timber) - a logger with a small, extensible API which provides utility on top of Android's normal Log class.
+-   [LeakCanary](https://github.com/square/leakcanary/) - a memory leak detection library for Android.
 
 ### Plugins
 -   [Ktlint](https://github.com/pinterest/ktlint) - kotlin linter with built-in formatter.
