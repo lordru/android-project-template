@@ -18,6 +18,7 @@ To maintain the style and quality of the code, are used the bellow static analys
 |---------------------------------------------------------|--------------|--------------------|---------------------------|
 | [KtLint](https://github.com/pinterest/ktlint)           | -            | `./gradlew ktlint` | `./gradlew ktlintFormat`  |
 | [Detekt](https://github.com/detekt/detekt)           | [.detekt-config.yml](/detekt/detekt-config.yml)            | `./gradlew detekt` | -  |
+
 These tools are integrated in [pre-commit git hook](/scripts/git-hooks/pre-commit). This will make sure your code is validated against KtLint and Detekt before every commit. To skip them for specific commit add this option at git command:
 ```properties
 git commit --no-verify
