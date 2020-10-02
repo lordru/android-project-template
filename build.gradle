@@ -21,6 +21,14 @@ allprojects {
     }
 }
 
+task installPreCommitGitHook(type: Copy) {
+    from new File(rootProject.rootDir, 'scripts/git-hooks/pre-commit')
+    into { new File(rootProject.rootDir, '.git/hooks') }
+    fileMode 0777
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+tasks.getByPath(':app:preBuild').dependsOn installPreCommitGitHook

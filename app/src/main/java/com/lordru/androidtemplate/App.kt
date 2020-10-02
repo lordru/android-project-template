@@ -12,7 +12,7 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         setupTimber()
-		setupStrictMode()
+        setupStrictMode()
     }
 
     private fun setupTimber() {
@@ -23,28 +23,28 @@ class App : Application() {
         }
     }
 
-	private fun setupStrictMode() {
-		doOnDebug {
-			StrictMode.setThreadPolicy(
-				StrictMode.ThreadPolicy.Builder()
-					.detectDiskReads()
-					.detectDiskWrites()
-					.detectNetwork()
-					.detectCustomSlowCalls()
-					.penaltyLog()
-					.build()
-			)
+    private fun setupStrictMode() {
+        doOnDebug {
+            StrictMode.setThreadPolicy(
+                StrictMode.ThreadPolicy.Builder()
+                    .detectDiskReads()
+                    .detectDiskWrites()
+                    .detectNetwork()
+                    .detectCustomSlowCalls()
+                    .penaltyLog()
+                    .build()
+            )
 
-			StrictMode.setVmPolicy(
-				StrictMode.VmPolicy.Builder()
-					.detectActivityLeaks()
-					.detectFileUriExposure()
-					.detectLeakedClosableObjects()
-					.detectLeakedRegistrationObjects()
-					.detectLeakedSqlLiteObjects()
-					.penaltyLog()
-					.build()
-			)
-		}
-	}
+            StrictMode.setVmPolicy(
+                StrictMode.VmPolicy.Builder()
+                    .detectActivityLeaks()
+                    .detectFileUriExposure()
+                    .detectLeakedClosableObjects()
+                    .detectLeakedRegistrationObjects()
+                    .detectLeakedSqlLiteObjects()
+                    .penaltyLog()
+                    .build()
+            )
+        }
+    }
 }
