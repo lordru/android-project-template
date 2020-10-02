@@ -16,8 +16,13 @@ To maintain the style and quality of the code, are used the bellow static analys
 
 | Tool                                                   | Config file  | Check command      | Fix command               |
 |---------------------------------------------------------|--------------|--------------------|---------------------------|
-| [ktlint](https://github.com/pinterest/ktlint)           | -            | `./gradlew ktlint` | `./gradlew ktlintFormat`  |
-| [detekt](https://github.com/detekt/detekt)           | [.detekt-config.yml](/detekt/detekt-config.yml)            | `./gradlew detekt` | -  |
+| [KtLint](https://github.com/pinterest/ktlint)           | -            | `./gradlew ktlint` | `./gradlew ktlintFormat`  |
+| [Detekt](https://github.com/detekt/detekt)           | [.detekt-config.yml](/detekt/detekt-config.yml)            | `./gradlew detekt` | -  |
+These tools are integrated in [pre-commit git hook](/scripts/git-hooks/pre-commit). This will make sure your code is validated against KtLint and Detekt before every commit. To skip them for specific commit add this option at git command:
+```properties
+git commit --no-verify
+```
+
 
 ### Dependencies
 -   [Timber](https://github.com/JakeWharton/timber) - a logger with a small, extensible API which provides utility on top of Android's normal Log class.
