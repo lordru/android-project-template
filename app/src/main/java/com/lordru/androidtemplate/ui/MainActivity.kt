@@ -1,7 +1,8 @@
-package com.lordru.androidtemplate
+package com.lordru.androidtemplate.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.lordru.androidtemplate.R
 
 class MainActivity : AppCompatActivity() {
 
